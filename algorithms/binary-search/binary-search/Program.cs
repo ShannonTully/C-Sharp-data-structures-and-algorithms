@@ -11,6 +11,12 @@ namespace binary_search
             BinarySearch(searcharray, 8);
         }
 
+        /// <summary>
+        /// Utilizes a binary search to return a key of found value
+        /// </summary>
+        /// <param name="searchlist">The array values to search</param>
+        /// <param name="key">The value to search for</param>
+        /// <returns>The index where the value lives in the searchlist</returns>
         public static int BinarySearch(int[] searchlist, int key)
         {
             int midpoint = searchlist.Length / 2;
