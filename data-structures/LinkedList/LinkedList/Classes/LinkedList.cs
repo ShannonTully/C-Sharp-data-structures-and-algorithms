@@ -58,5 +58,78 @@ namespace LinkedList.Classes
 
             return output.ToArray();
         }
+
+        /// <summary>
+        /// Append a value to the end of a linked list
+        /// </summary>
+        /// <param name="value">Value to add</param>
+        public void Append(int value)
+        {
+            Node newNode = new Node();
+            newNode.Value = value;
+            if (Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+            Node current = Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next = newNode;
+        }
+
+        /// <summary>
+        /// Insert a value before the target value
+        /// </summary>
+        /// <param name="value">Value to add</param>
+        /// <param name="target">Target value to add before</param>
+        public void InsertBefore(int value, int target)
+        {
+            Node newNode = new Node();
+            newNode.Value = value;
+            if (Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+            Node current = Head;
+            while (current.Next != null && current.Next.Value != target)
+            {
+                current = current.Next;
+            }
+            if (current.Next != null)
+            {
+                newNode.Next = current.Next;
+            }
+            current.Next = newNode;
+        }
+
+        /// <summary>
+        /// Insert a value after the target value
+        /// </summary>
+        /// <param name="value">Value to add</param>
+        /// <param name="target">Target valuse to add after</param>
+        public void InsertAfter(int value, int target)
+        {
+            Node newNode = new Node();
+            newNode.Value = value;
+            if (Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+            Node current = Head;
+            while (current.Value != target && current.Next != null)
+            {
+                current = current.Next;
+            }
+            if (current.Next != null)
+            {
+                newNode.Next = current.Next;
+            }
+            current.Next = newNode;
+        }
     }
 }

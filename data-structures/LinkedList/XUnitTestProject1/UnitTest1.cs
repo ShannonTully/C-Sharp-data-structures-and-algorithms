@@ -82,6 +82,104 @@ namespace XUnitTestProject1
 
             Assert.Equal(excpected, LL.Print());
         }
+
+        [Fact]
+        public void TestAppendEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+
+            Assert.Equal(1, LL.Head.Value);
+        }
+
+        [Fact]
+        public void TestAppendNotEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            Assert.Equal(1, LL.Head.Value);
+        }
+
+        [Fact]
+        public void TestInsertBeforeEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.InsertBefore(1, 2);
+
+            Assert.Equal(1, LL.Head.Value);
+        }
+
+        [Fact]
+        public void TestInsertBeforeNotEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            LL.InsertBefore(4, 2);
+
+            Assert.Equal(4, LL.Head.Next.Value);
+        }
+
+        [Fact]
+        public void TestInsertBeforeNotFound()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            LL.InsertBefore(4, 5);
+
+            Assert.Equal(4, LL.Head.Next.Next.Next.Value);
+        }
+
+        [Fact]
+        public void TestInsertAfterEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.InsertAfter(1, 2);
+
+            Assert.Equal(1, LL.Head.Value);
+        }
+
+        [Fact]
+        public void TestInsertAfterNotEmpty()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            LL.InsertAfter(4, 2);
+
+            Assert.Equal(4, LL.Head.Next.Next.Value);
+        }
+
+        [Fact]
+        public void TestInsertAfterNotFound()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            LL.InsertAfter(4, 5);
+
+            Assert.Equal(4, LL.Head.Next.Next.Next.Value);
+        }
     }
 }
 
