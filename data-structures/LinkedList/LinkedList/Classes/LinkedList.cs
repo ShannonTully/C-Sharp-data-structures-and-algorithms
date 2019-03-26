@@ -9,6 +9,10 @@ namespace LinkedList.Classes
     {
         public Node Head;
 
+        /// <summary>
+        /// Insert value into the beginning of the linked list
+        /// </summary>
+        /// <param name="value">Value to be added</param>
         public void Insert(int value)
         {
             Node newNode = new Node();
@@ -17,6 +21,11 @@ namespace LinkedList.Classes
             Head = newNode;
         }
 
+        /// <summary>
+        /// Does the linked list include given value
+        /// </summary>
+        /// <param name="value">Value to search for</param>
+        /// <returns>Is in or not</returns>
         public bool Includes(int value)
         {
             Node current = Head;
@@ -32,6 +41,10 @@ namespace LinkedList.Classes
             return false;
         }
 
+        /// <summary>
+        /// Return a array of all values
+        /// </summary>
+        /// <returns>Array of values</returns>
         public int[] Print()
         {
             Node current = Head;
