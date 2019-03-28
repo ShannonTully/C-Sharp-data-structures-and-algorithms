@@ -131,5 +131,40 @@ namespace LinkedList.Classes
             }
             current.Next = newNode;
         }
+
+        /// <summary>
+        /// Find the node that is k from the end
+        /// </summary>
+        /// <param name="target">How many from back</param>
+        /// <returns>Node of kth from end</returns>
+        public Node KthFromEnd(int target)
+        {
+            Node front = Head;
+            Node back = Head;
+
+            if (Head == null)
+            {
+                return null;
+            }
+
+            for (int i = 0; i < target; i++)
+			{
+                if (front.Next != null)
+	            {
+                    front = front.Next;
+	            }
+                else
+	            {
+                    return null;
+	            }
+			}
+
+            while (front.Next != null)
+	        {
+                front = front.Next;
+                back = back.Next;
+	        }
+            return back;
+        }
     }
 }

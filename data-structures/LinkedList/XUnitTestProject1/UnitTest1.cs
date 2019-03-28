@@ -180,6 +180,30 @@ namespace XUnitTestProject1
 
             Assert.Equal(4, LL.Head.Next.Next.Next.Value);
         }
+
+        [Fact]
+        public void TestKthFromEndTooBig()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            Assert.Null(LL.KthFromEnd(3));
+        }
+
+        [Fact]
+        public void TestKthFromEndValid()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            LL.Append(1);
+            LL.Append(2);
+            LL.Append(3);
+
+            Assert.Equal(2, LL.KthFromEnd(1).Value);
+        }
     }
 }
 
