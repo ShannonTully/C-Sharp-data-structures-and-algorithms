@@ -204,6 +204,14 @@ namespace XUnitTestProject1
 
             Assert.Equal(2, LL.KthFromEnd(1).Value);
         }
+
+        [Fact]
+        public void TestKthFromEndInvalid()
+        {
+            LinkedList.Classes.LinkedList LL = new LinkedList.Classes.LinkedList();
+
+            Assert.Null(LL.KthFromEnd(1));
+        }
     }
 }
 
