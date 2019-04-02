@@ -39,3 +39,15 @@ Space - O(1)
 Peek - Peek at front node
 Time - O(n)
 Space - O(1)
+
+StackEnqueue - Enqueue a node onto a Queue using 2 stacks
+Time - O(n)
+Space - O(n)
+
+StackDequeue - Dequeue a node from a Queue using 2 stacks
+Time - O(1)
+Space - O(1)
+
+StackPeek - Peek at front node using 2 stacks
+Time - O(1)
+Space - O(1)

@@ -119,5 +119,62 @@ namespace XUnitTestProject1
 
             Assert.Null(q.Peek());
         }
+
+        [Fact]
+        public void TestStackQueueEnqueue()
+        {
+            Queue q = new Queue();
+            q.StackEnqueue(1);
+
+            Assert.Equal(1, q.StackPeek().Value);
+        }
+
+        [Fact]
+        public void TestStackQueueDequeueAndEmptyAfter()
+        {
+            Queue q = new Queue();
+            q.StackEnqueue(1);
+            q.StackDequeue();
+
+            Assert.Null(q.StackPeek());
+        }
+
+        [Fact]
+        public void TestStackQueueDequeue()
+        {
+            Queue q = new Queue();
+            q.StackEnqueue(1);
+            q.StackEnqueue(2);
+            q.StackDequeue();
+
+            Assert.Equal(2, q.StackPeek().Value);
+        }
+
+        [Fact]
+        public void TestStackQueueEnqueueMultiple()
+        {
+            Queue q = new Queue();
+            q.StackEnqueue(1);
+            q.StackEnqueue(2);
+
+            Assert.Equal(1, q.StackPeek().Value);
+        }
+
+        [Fact]
+        public void TestStackQueuePeek()
+        {
+            Queue q = new Queue();
+            q.StackEnqueue(1);
+
+            Assert.Equal(1, q.StackPeek().Value);
+        }
+
+        [Fact]
+        public void TestStackQueueEmpty()
+        {
+            Queue q = new Queue();
+
+            Assert.Null(q.StackPeek());
+        }
     }
 }
