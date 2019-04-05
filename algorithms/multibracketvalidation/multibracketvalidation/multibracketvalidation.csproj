@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="StackAndQueue">
+      <HintPath>..\..\..\data-structures\stacks-and-queues\StackAndQueue\bin\Debug\netcoreapp2.2\StackAndQueue.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
