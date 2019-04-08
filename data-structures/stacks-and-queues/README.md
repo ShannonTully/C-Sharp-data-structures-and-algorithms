@@ -52,4 +52,5 @@ StackPeek - Peek at front node using 2 stacks
 Time - O(1)
 Space - O(1)
 
-![picture]()
+![picture](https://github.com/ShannonTully/C-Sharp-data-structures-and-algorithms/blob/master/assets/queue-with-stacks.jpg)
+
