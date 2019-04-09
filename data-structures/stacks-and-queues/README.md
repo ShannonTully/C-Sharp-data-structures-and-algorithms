@@ -51,3 +51,5 @@ Space - O(1)
 StackPeek - Peek at front node using 2 stacks
 Time - O(1)
 Space - O(1)
+
+![picture]()
